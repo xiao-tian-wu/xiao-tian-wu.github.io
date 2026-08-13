@@ -22,6 +22,7 @@
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
   --ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+  --page-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -145,8 +146,7 @@ button {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  scroll-behavior: auto;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
 }
@@ -156,40 +156,56 @@ button {
 }
 
 .slide {
+  --parallax-x: 0px;
+  --content-opacity: 0;
+  --content-x: 0px;
+  --content-y: 10px;
+  --content-scale: 0.992;
   position: relative;
   width: 100vw;
   min-width: 100vw;
   height: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   display: flex;
   align-items: center;
   background-color: var(--paper);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.slide::before {
+  position: absolute;
+  z-index: 0;
+  inset: -24px;
+  background-image: var(--slide-image);
+  background-position: var(--slide-position);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  content: "";
+  transform: translate3d(var(--parallax-x), 0, 0) scale(1.035);
+  will-change: transform;
 }
 
 .slide-about {
+  --slide-image: url("./images/about-corot-reading.jpg");
+  --slide-position: 72% center;
   justify-content: flex-start;
-  background-image: url("./images/about-corot-reading.jpg");
-  background-position: 72% center;
 }
 
 .slide-publications {
+  --slide-image: url("./images/research-blackboard-film.jpg");
+  --slide-position: 76% center;
   justify-content: flex-start;
-  background-image: url("./images/research-blackboard-film.jpg");
-  background-position: 76% center;
 }
 
 .slide-contact {
+  --slide-image: url("./images/contact-west-lake-ike-taiga-cropped.jpg");
+  --slide-position: 38% center;
   justify-content: flex-end;
-  background-image: url("./images/contact-west-lake-ike-taiga-cropped.jpg");
-  background-position: 38% center;
 }
 
 .shade {
   position: absolute;
+  z-index: 1;
   inset: 0;
 }
 
@@ -215,14 +231,9 @@ button {
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--green-light) transparent;
-  opacity: 0;
-  transform: translateX(-25px);
-  transition: opacity 650ms var(--ease), transform 650ms var(--ease);
-}
-
-.slide.active .slide-inner {
-  opacity: 1;
-  transform: translateX(0);
+  opacity: var(--content-opacity);
+  transform: translate3d(var(--content-x), var(--content-y), 0) scale(var(--content-scale));
+  will-change: opacity, transform;
 }
 
 .slide-inner::-webkit-scrollbar {
@@ -607,7 +618,11 @@ body[data-slide="2"] .arrow:focus-visible {
 
 }
 
-@media (prefers-reduced-motion: reduce) {
+html:not(.motion-ready) .slide::before {
+  transform: none;
+}
+
+@media (scripting: none) {
   .reel {
     scroll-behavior: auto;
   }
@@ -616,5 +631,9 @@ body[data-slide="2"] .arrow:focus-visible {
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
+  }
+
+  .slide::before {
+    transform: none;
   }
 }
