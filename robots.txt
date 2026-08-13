@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xiao-tian-wu.github.io/sitemap.xml
