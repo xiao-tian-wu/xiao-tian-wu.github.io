@@ -12,8 +12,9 @@ no framework or build step.
 1. Create a public GitHub repository named `xiao-tian-wu.github.io`.
 2. Upload everything in this folder to the repository and push it to `main`.
 3. Open **Settings → Pages** in the repository.
-4. Under **Build and deployment**, select **GitHub Actions**.
-5. The included workflow will publish the site at
+4. Under **Build and deployment**, select **Deploy from a branch**, then choose
+   `main` and `/ (root)`.
+5. GitHub Pages will publish the site at
    `https://xiao-tian-wu.github.io/`.
 
 ## Content
@@ -30,7 +31,7 @@ preprint also includes its arXiv link.
 - Page content: `index.html`
 - Colors, typography, and layout: `styles.css`
 - Navigation and keyboard controls: `script.js`
-- Backgrounds: three photographs stored in `images`, with local copies so the
+- Backgrounds: three images stored in `images`, with local copies so the
   site does not depend on an image host. Credits and source links are listed in
   `IMAGE-CREDITS.md`.
 
