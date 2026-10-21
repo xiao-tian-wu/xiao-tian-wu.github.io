@@ -3,6 +3,7 @@
 The following PDF files are published with the site:
 
 - `xiaotian-wu-cv.pdf`
+- `hausdorff-dimension-singular-set-optimal-transport.pdf`
 - `optimal-transport-non-convex-polyhedral-domains.pdf`
 - `singular-profile-relativistic-heat-cost.pdf`
 - `optimal-transports-spherical-domains.pdf`
