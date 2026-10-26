@@ -1,40 +1,22 @@
-# Xiaotian Wu — Academic Homepage
+# Xiao-Tian Wu — Academic Homepage
 
-A full-screen, horizontal academic homepage for `https://xiao-tian-wu.github.io/`.
-It retains the immersive slide structure of the supplied reference while using
-an original “research notebook” visual system: an ivory navigation bar, mineral
-green and clay accents, asymmetric layouts, section numerals, and restrained
-mathematical notation. The site is plain HTML, CSS, and JavaScript, so there is
-no framework or build step.
+A minimal, responsive single-page academic homepage at
+https://xiao-tian-wu.github.io/.
 
-## Publish on GitHub Pages
+- Content and links: `index.html`
+- Layout and typography: `styles.css`
+- CV and paper PDFs: `files/`
+- Google Search Console verification: `google5a1f18699c997823.html`
 
-1. Create a public GitHub repository named `xiao-tian-wu.github.io`.
-2. Upload everything in this folder to the repository and push it to `main`.
-3. Open **Settings → Pages** in the repository.
-4. Under **Build and deployment**, select **Deploy from a branch**, then choose
-   `main` and `/ (root)`.
-5. GitHub Pages will publish the site at
-   `https://xiao-tian-wu.github.io/`.
+The page uses system fonts and requires no JavaScript or build step.
+GitHub Pages publishes the root of the `main` branch.
 
-## Content
+## Previous design
 
-The publication list was transferred from the public Google Sites academic
-profile. Before publishing, place the CV and preprint PDFs in the `files`
-folder using the filenames listed in `files/README.md`. The published site will
-then serve them directly from GitHub Pages without depending on Google Drive.
-The journal article points to its official publisher page, and the first
-preprint also includes its arXiv link.
+The complete previous site is preserved at Git tag
+`archive-before-minimal-2026-10-26` (commit `d5ee1df`).
+A standalone ZIP backup is saved alongside this project:
+`../homepage-before-minimal-2026-10-26.zip`.
 
-## Editing
-
-- Page content: `index.html`
-- Colors, typography, and layout: `styles.css`
-- Navigation and keyboard controls: `script.js`
-- Backgrounds: three images stored in `images`, with local copies so the
-  site does not depend on an image host. Credits and source links are listed in
-  `IMAGE-CREDITS.md`.
-
-The layout is responsive and supports horizontal touch gestures, mouse/trackpad
-scrolling, arrow keys, reduced-motion preferences, social metadata, robots.txt,
-and a sitemap.
+The old images, font licenses, image credits, and navigation script remain
+in the repository for reference but are not loaded by the current page.
