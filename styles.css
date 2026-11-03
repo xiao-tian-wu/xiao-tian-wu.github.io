@@ -6,37 +6,37 @@
   -webkit-text-size-adjust: 100%;
 }
 * { box-sizing: border-box; }
-body { margin: 0; font-size: 16px; line-height: 1.65; }
-main { max-width: 840px; margin: 0 auto; padding: 76px 32px 64px; }
-h1 { margin: 0 0 18px; font-family: Georgia, "Times New Roman", serif; font-size: 42px; font-weight: 400; line-height: 1.2; letter-spacing: -1px; }
-h2 { margin: 0 0 24px; font-size: 19px; line-height: 1.4; font-weight: 600; }
+body { margin: 0; font-size: 16px; line-height: 1.5; }
+main { max-width: 840px; margin: 0 auto; padding: 42px 32px 36px; }
+h1 { margin: 0 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: 42px; font-weight: 400; line-height: 1.2; letter-spacing: -1px; }
+h2 { margin: 0 0 16px; font-size: 19px; line-height: 1.4; font-weight: 600; }
 p { margin: 0; }
-.affiliation { margin-bottom: 15px; }
+.affiliation { margin-bottom: 10px; }
+.contact-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 20px; }
 a { color: #355b50; text-decoration: underline; text-decoration-color: #aabeb6; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 a:hover { color: #203d34; text-decoration-color: currentColor; }
 a:focus-visible { outline: 2px solid #355b50; outline-offset: 5px; }
-section { margin-top: 52px; }
+section { margin-top: 30px; }
 .publication-list { margin: 0; padding-left: 24px; }
-.publication-list li { padding-left: 5px; margin-bottom: 26px; }
+.publication-list li { padding-left: 5px; margin-bottom: 17px; }
+.publication-list li:last-child { margin-bottom: 0; }
 .publication-list li::marker { color: #737873; font-size: 14px; }
 .publication-list strong { font-weight: 500; }
 .publication-list li > a { color: #333833; }
-.publication-list span { display: block; margin-top: 5px; font-size: 14px; color: #626762; }
-footer { margin-top: 48px; }
-footer h2 { margin-bottom: 12px; }
-.location { color: #626762; font-size: 14px; margin-top: 4px; }
-section, footer { scroll-margin-top: 24px; }
+.publication-list span { display: block; margin-top: 2px; font-size: 14px; color: #626762; }
+.location { color: #626762; font-size: 14px; }
+section, #contact { scroll-margin-top: 24px; }
 @media (max-width: 600px) {
-  main { padding: 42px 23px; }
+  main { padding: 28px 23px; }
   h1 { font-size: 36px; }
-  section { margin-top: 40px; }
+  section { margin-top: 26px; }
   a { overflow-wrap: anywhere; }
 }
 @media print {
   main { max-width: none; padding: 0; }
   body { font-size: 11pt; }
   h1 { font-size: 26pt; }
-  section, footer { margin-top: 24px; }
+  section { margin-top: 24px; }
   .publication-list li { break-inside: avoid; margin-bottom: 14px; }
   a { color: inherit; text-decoration: none; }
 }
