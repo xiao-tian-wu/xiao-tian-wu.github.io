@@ -24,7 +24,6 @@ section { margin-top: 30px; }
 .publication-list strong { font-weight: 500; }
 .publication-list li > a { color: #333833; }
 .publication-list span { display: block; margin-top: 2px; font-size: 14px; color: #626762; }
-.location { color: #626762; font-size: 14px; }
 section, #contact { scroll-margin-top: 24px; }
 @media (max-width: 600px) {
   main { padding: 28px 23px; }
