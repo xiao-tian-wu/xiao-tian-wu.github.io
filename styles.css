@@ -13,8 +13,8 @@ h2 { margin: 0 0 16px; font-size: 19px; line-height: 1.4; font-weight: 600; }
 p { margin: 0; }
 .affiliation { margin-bottom: 10px; }
 .contact-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 20px; }
-a { color: #355b50; text-decoration: underline; text-decoration-color: #aabeb6; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-a:hover { color: #203d34; text-decoration-color: currentColor; }
+a { color: #355b50; text-decoration: none; }
+a:hover { color: #203d34; }
 a:focus-visible { outline: 2px solid #355b50; outline-offset: 5px; }
 section { margin-top: 30px; }
 .publication-list { margin: 0; padding-left: 24px; }
